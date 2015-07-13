@@ -7,7 +7,7 @@ use Components\Url;
 use Components\Request;
 
 
-abstract class AbstractRouter implements IRouter
+abstract class AbstractRouter implements RouterInterface
 {
     /**
      * @var array $routes
@@ -78,18 +78,6 @@ abstract class AbstractRouter implements IRouter
         $this->setRequest($request);
         $this->setRegexKeys();
     }
-
-
-    /**
-     * @method setControllerIfExist
-     * @param $module -> namespace for class
-     * @param $controller -> class name
-     * @description Function checks controller's exist
-     *              if yes -> it using private method setReflection to set private field $reflection
-     *                        and the next is checking the class is instantiable
-     *              if yes -> value of variable $class is assigning to field $controller
-     */
-
 
     /**
      * @method searchAddress

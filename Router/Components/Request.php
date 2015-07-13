@@ -31,11 +31,10 @@ class Request
     {
         switch ($this->request_type) {
             case 'get':
-                echo 'cos';
-                var_dump($_GET);
+                echo 'get';
                 break;
             case 'post':
-                var_dump($_POST);
+                echo 'post';
                 break;
         }
     }

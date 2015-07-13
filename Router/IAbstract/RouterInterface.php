@@ -3,7 +3,7 @@
 namespace IAbstract;
 
 
-interface IRouter
+interface RouterInterface
 {
     /**
      * @param $path

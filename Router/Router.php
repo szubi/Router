@@ -100,6 +100,12 @@ class Router extends AbstractRouter
             }
         }
 
+        if (empty($current_route['module']) && empty($current_route['controller']) && empty($current_route['action'])) {
+            $current_route['module'] = $this->default_module;
+            $current_route['controller'] = $this->default_controller;
+            $current_route['action'] = $this->default_action;
+        }
+
         return $current_route;
     }
 
@@ -256,8 +262,6 @@ class Router extends AbstractRouter
         if ($redirect_path != $current_path) {
             header('Location: ' . $redirect_path, true, (true === $permanent) ? 301 : 302);
         }
-
-        exit();
     }
 
     public function parseRequest($type, $action=null)
