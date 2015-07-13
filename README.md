@@ -1,4 +1,4 @@
-# [![SensioLabsInsight](https://insight.sensiolabs.com/projects/2976dc02-a08c-4199-ba3a-c1d1dc6af9e5/big.png)](https://insight.sensiolabs.com/projects/2976dc02-a08c-4199-ba3a-c1d1dc6af9e5) Simple Router #
+# [![SensioLabsInsight](https://insight.sensiolabs.com/projects/2976dc02-a08c-4199-ba3a-c1d1dc6af9e5/big.png)](https://insight.sensiolabs.com/projects/2976dc02-a08c-4199-ba3a-c1d1dc6af9e5)          Simple Router #
 
 Simple routing to the simple actions.
 
