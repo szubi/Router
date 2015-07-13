@@ -8,7 +8,7 @@ Simple routing to the simple actions.
 
 It is simpler than you think:
 
-```
+```php
 
 <?php
 
