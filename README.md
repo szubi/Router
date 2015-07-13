@@ -23,7 +23,8 @@ $router->setDefaultAction('index');
 
 // set first track
 
-// you can always set your request type, so you can define four the same url addresses with different request
+// you can always set your request type, 
+// so you can define four the same url addresses with different request
 
 $router->add(
     '/',
@@ -37,9 +38,10 @@ $router->add(
     ]
 );
 
-//you can always set data from url address
+//You can always set data from url address
 
-// param1 values will change on :param values from url, if the value meets the criteria.
+// param1 values will change on :param values from url, 
+// if the value meets the criteria.
 
 $router->add(
     '/admin/controllers/user/show/:param',
@@ -53,5 +55,8 @@ $router->add(
         'method' => 'get'
     ]
 );
+
+// It gets data to variable -> For example we can transfer this to PageController or FrontController.
+$route = $router->resolve();
 
 ```
