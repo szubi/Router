@@ -6,7 +6,13 @@ namespace IAbstract;
 use Components\Url;
 use Components\Request;
 
-
+/**
+ *
+ * @author Wojciech Szuba
+ * @contact: w.szubi@gmail.com
+ * @version 1.0.0
+ *
+ */
 abstract class AbstractRouter implements RouterInterface
 {
     /**
@@ -83,8 +89,12 @@ abstract class AbstractRouter implements RouterInterface
      * @method searchAddress
      * @param array $routes
      * @param array $path_info
-     * @description Function looks address
+     * @description Function looks address which pass to current website address
      *
+     *              it uses $regex's values to check variable's value from address
+     *
+     *              if there is a match address -> function returns true
+     *              if there is not a match address -> function returns false
      * @return bool
      */
     protected function searchAddress(Array $routes, Array $path_info)
@@ -128,22 +138,45 @@ abstract class AbstractRouter implements RouterInterface
         return true;
     }
 
+    /**
+     * @method routeArray
+     * @param Url $url
+     * @description
+     * @return array|string
+     * @throws \Exception -> if address is empty
+     */
     protected function routeArray(Url $url)
     {
         $url->divideAddress($url->getAddressElements());
         return $url->getActions();
     }
 
+    /**
+     * @method setUrl
+     * @param Url $url
+     * @description it initializes static $url variable by Url object
+     */
     protected function setUrl(Url $url)
     {
         self::$url = $url;
     }
 
+    /**
+     * @method setRequest
+     * @param Request $request
+     * @description it initializes $request variable by Request object
+     */
     protected function setRequest(Request $request)
     {
         $this->request = $request;
     }
 
+    /**
+     * @method setRegexKeys
+     * @arguments none
+     * @description method gets keys(elements names) from $regex array
+     *              it is using in @method searchAddress
+     */
     protected function setRegexKeys()
     {
         $this->regex_keys = array_keys($this->regex);

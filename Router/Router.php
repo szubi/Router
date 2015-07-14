@@ -100,6 +100,7 @@ class Router extends AbstractRouter
             }
         }
 
+        // źle
         if (empty($current_route['module']) && empty($current_route['controller']) && empty($current_route['action'])) {
             $current_route['module'] = $this->default_module;
             $current_route['controller'] = $this->default_controller;
