@@ -32,7 +32,7 @@ $router->add(
         'action' => 'action'
     ],
     [
-        'method' => get|post
+        'method' => 'get|post'
     ]
 );
 
@@ -54,7 +54,8 @@ $router->add(
     ]
 );
 
-// It gets data to variable -> For example we can transfer this to PageController or FrontController.
+// It gets data to variable 
+// For example we can transfer this to PageController or FrontController.
 $route = $router->resolve();
 
 ```
