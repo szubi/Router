@@ -22,12 +22,12 @@ $router->setDefaultAction('index');
 // set first track
 
 // you can always set your request type, 
-// so you can define four the same url addresses with different request
+// so you can define few the same url addresses with different request
 
 $router->add(
     '/',
     [
-        'module' => Namespace1\Namespace2\Namespace3,
+        'module' => 'FirstNamespace\Second\Third',
         'controller' => 'Controller',
         'action' => 'action'
     ],
